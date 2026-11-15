@@ -1,4 +1,4 @@
-# Runs test-snyk-demo/reusable-workflows/.github/workflows/go-ci.yaml@v3: lint, tests, Snyk Open Source + Code.
+# Runs test-snyk-demo/reusable-workflows/.github/workflows/go-ci.yaml@v4: lint, tests, Snyk Open Source + Code.
 # Needs secret SNYK_TOKEN (without it the Snyk scan is skipped with a warning),
 # and GO_MODULES_TOKEN: a token that can read the private brightsheets repos this module imports.
 name: CI
@@ -15,7 +15,7 @@ permissions:
   packages: write
 jobs:
   ci:
-    uses: test-snyk-demo/reusable-workflows/.github/workflows/go-ci.yaml@v3
+    uses: test-snyk-demo/reusable-workflows/.github/workflows/go-ci.yaml@v4
     with:
       snyk-org: test-snyk-demo
       go-private-owners: brightsheets
